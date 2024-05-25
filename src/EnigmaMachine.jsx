@@ -45,6 +45,7 @@ function EnigmaMachine() {
   const [pressedKeyToggle, setPressedKeyToggle] = useState(false);
   const [currentText, setCurrentText] = useState();
   const [nonCipherText, setNonCipherText] = useState();
+  const [messageKey, setMessageKey] = useState();
 
   const [tab, setTab] = useState(0);
 
@@ -60,6 +61,9 @@ function EnigmaMachine() {
   const [plugboard, setPlugboard] = useState([]);
 
   const handleKeyPress = (key) => {
+    if(!nonCipherText){
+      setMessageKey(Rotor.ALPHABET[rotor1.position] + Rotor.ALPHABET[rotor2.position] + Rotor.ALPHABET[rotor3.position])
+    }
     setNonCipherText(nonCipherText ? nonCipherText + key : key);
     var ch = applyPlugboard(key);
     rotor3.incPosition();
@@ -196,7 +200,7 @@ function EnigmaMachine() {
             </Grid>
             <Grid item xs={12} md={12} lg={4} xl={5} mx={4} my={4}>
               <TextBook
-                messageKey="FIQ"
+                messageKey={messageKey}
                 text={currentText}
                 nonCipherText={nonCipherText}
                 configuration={{

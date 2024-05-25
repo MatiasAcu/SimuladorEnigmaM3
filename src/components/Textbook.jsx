@@ -36,7 +36,6 @@ const TextBook = ({
   const [displayText, setDisplayText] = useState("");
   const [displayNonCipherText, setDisplayNonCipherText] = useState("");
   const [previousConf, setPreviousConf] = useState(configuration);
-  const [previousKey, setPreviousKey] = useState(messageKey);
   const [copyTooltipOpen, setCopyTooltipOpen] = useState(false);
   const [copyTooltipMessage, setCopyTooltipMessage] = useState(
     "Copiar al portapapeles"
@@ -79,15 +78,13 @@ const TextBook = ({
 
   useEffect(() => {
     if (
-      JSON.stringify(previousConf) !== JSON.stringify(configuration) ||
-      JSON.stringify(messageKey) !== JSON.stringify(previousKey)
+      JSON.stringify(previousConf) !== JSON.stringify(configuration) 
     ) {
       setDisplayText();
       setPreviousConf(configuration);
-      setPreviousKey(messageKey);
       onClear();
     }
-  }, [configuration, messageKey]);
+  }, [configuration]);
 
   const enigmaSettings = () => {
     let plugboard = configuration.plugboard[0]
