@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/SimuladorEnigmaM3/static/css/main.c8f36b77.css",
-    "main.js": "/SimuladorEnigmaM3/static/js/main.8eb2953d.js",
+    "main.js": "/SimuladorEnigmaM3/static/js/main.c3640bd9.js",
     "static/media/old_paper.jpg": "/SimuladorEnigmaM3/static/media/old_paper.df9de61bcbc9903a53a3.jpg",
     "index.html": "/SimuladorEnigmaM3/index.html",
     "main.c8f36b77.css.map": "/SimuladorEnigmaM3/static/css/main.c8f36b77.css.map",
-    "main.8eb2953d.js.map": "/SimuladorEnigmaM3/static/js/main.8eb2953d.js.map"
+    "main.c3640bd9.js.map": "/SimuladorEnigmaM3/static/js/main.c3640bd9.js.map"
   },
   "entrypoints": [
     "static/css/main.c8f36b77.css",
-    "static/js/main.8eb2953d.js"
+    "static/js/main.c3640bd9.js"
   ]
 }
